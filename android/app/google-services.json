@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "58949099469",
+    "firebase_url": "https://test-tutu-nfc.firebaseio.com",
+    "project_id": "test-tutu-nfc",
+    "storage_bucket": "test-tutu-nfc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58949099469:android:f073b824f7f34410",
+        "android_client_info": {
+          "package_name": "com.renanaugustocardoso.testtutunfc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58949099469-ke9k4tco887rqs58s6vs87cbevrkoss3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.renanaugustocardoso.testtutunfc",
+            "certificate_hash": "c30b48315970e495b8e4e67edb8a100666258940"
+          }
+        },
+        {
+          "client_id": "58949099469-en4jp766jdjctktoqfb34rc9fmh80v17.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrL-SmQ9FnQE52hzFa9MUGtFIqAFgOFiY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58949099469-en4jp766jdjctktoqfb34rc9fmh80v17.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
