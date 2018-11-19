@@ -28,18 +28,44 @@ export default class Main extends React.Component {
     }
 
     state = {
-        user: null
+        user: null,
+        userEventes: [],
+        userEventsData: [],
     }
 
     componentDidMount() {
-        setInterval(
-            () => this.setState({
-                user: firebase.auth().currentUser
-            }), 1000);
+        setTimeout(
+            () => {
+                this.setState({user: firebase.auth().currentUser})
+                firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).get()
+                    .then(doc => {
+
+                        console.log('consultando os eventos do usuário', doc.data().events)
+                        
+                        this.setState({userEvents: doc.data().events})
+
+                        
+                        doc.data().events.forEach(docRef => {
+
+                            firebase.firestore().collection('events').doc(docRef).get()
+                                .then(eventDoc => {
+                                    //console.log('consultando dados do eventos', eventDoc.data())
+                                    this.setState(prev => ({userEventsData: [eventDoc.data(), ...prev.userEventsData]}))
+                                    //this.setState({userEventsData: [eventDoc.data()]})
+                                    //userEventsData.push(eventDoc.data())
+                                })
+                        })
+
+
+                    }).catch(err => {
+                        alert('Ops..... alguma coisa deu ruim com os nossos servidores, por favor tente mais tarde!')
+                        console.warn(err)
+                    })
+            }, 1000);
     }
 
     render() {
-        const user = firebase.auth().currentUser
+        console.log(this.state.userEventsData)
         return (
             <View style={styles.container}>
                 <List >
@@ -49,7 +75,7 @@ export default class Main extends React.Component {
                                 key={item.title}
                                 title={item.title}
                                 leftIcon={{ name: item.icon }}
-                                onPress={() => this.props.navigation.navigate(item.goto)}
+                                onPress={() => this.props.navigation.navigate(item.goto, {userEventsData: this.state.userEventsData})}
                             />
                         ))
                     }

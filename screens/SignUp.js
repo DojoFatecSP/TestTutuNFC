@@ -19,11 +19,6 @@ export default class SignUp extends React.Component {
             firebase.auth().createUserWithEmailAndPassword(email, password)
                 .then(result => {
                     
-                    firebase.auth().currentUser.updateProfile({
-                        displayName: nome
-                    }).then(() => console.log('Nome Atualizado'))
-                        .catch(err => console.warn(err))
-                    
                     firebase.firestore().collection('users').doc(result.user.uid).set({
                         events:[],
                         nome

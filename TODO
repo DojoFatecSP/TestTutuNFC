@@ -1,3 +1,22 @@
 Animação de espera para cadastro e login do usuario!
 Validar as entradas do cadastro 
 validar as entradas do login
+
+
+PS C:\Program Files\Android\Android Studio\jre\bin> .\keytool -exportcert -alias androiddebugkey -keystore "C:\Users\RenanCardoso\.android\debug.keystore" -list -v
+Informe a senha da área de armazenamento de chaves:
+Nome do alias: androiddebugkey
+Data de criação: 22/01/2018
+Tipo de entrada: PrivateKeyEntry
+Comprimento da cadeia de certificados: 1
+Certificado[1]:
+Proprietário: C=US, O=Android, CN=Android Debug
+Emissor: C=US, O=Android, CN=Android Debug
+Número de série: 1
+Válido de: Mon Jan 22 14:00:51 BRST 2018 a: Wed Jan 15 14:00:51 BRST 2048
+Fingerprints do certificado:
+         MD5:  0B:6B:2B:E0:B5:CE:03:7C:A7:03:71:BA:ED:D6:58:D5
+         SHA1: 25:1E:2F:DC:2E:42:B0:4C:56:4A:15:6C:61:4A:AE:44:83:5D:B9:41
+         SHA256: CC:38:6D:3D:33:05:11:66:28:12:DD:B9:A1:AC:EE:9C:A8:A8:1E:DE:C3:12:8A:4A:80:E9:DA:49:AD:F6:1D:1C
+         Nome do algoritmo de assinatura: SHA1withRSA
+         Versão: 1

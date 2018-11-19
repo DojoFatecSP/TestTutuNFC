@@ -8,6 +8,7 @@ export default class Loading extends React.Component {
 
     componentDidMount() {
         firebase.auth().onAuthStateChanged(user => {
+            //console.log(user)
             this.props.navigation.navigate(user ? 'Main' : 'SignUp', {user})
         })
     }

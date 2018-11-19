@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "58949099469",
-    "firebase_url": "https://test-tutu-nfc.firebaseio.com",
-    "project_id": "test-tutu-nfc",
-    "storage_bucket": "test-tutu-nfc.appspot.com"
+    "project_number": "553212222816",
+    "firebase_url": "https://tutu-verde.firebaseio.com",
+    "project_id": "tutu-verde",
+    "storage_bucket": "tutu-verde.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:58949099469:android:f073b824f7f34410",
+        "mobilesdk_app_id": "1:553212222816:android:f073b824f7f34410",
         "android_client_info": {
           "package_name": "com.renanaugustocardoso.testtutunfc"
         }
       },
       "oauth_client": [
         {
-          "client_id": "58949099469-ke9k4tco887rqs58s6vs87cbevrkoss3.apps.googleusercontent.com",
+          "client_id": "553212222816-7tinq598pn20113v8ak8oljhf0u6an8d.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.renanaugustocardoso.testtutunfc",
-            "certificate_hash": "c30b48315970e495b8e4e67edb8a100666258940"
+            "certificate_hash": "251e2fdc2e42b04c564a156c614aae44835db941"
           }
         },
         {
-          "client_id": "58949099469-en4jp766jdjctktoqfb34rc9fmh80v17.apps.googleusercontent.com",
+          "client_id": "553212222816-968u9i0cs192curnvarkt3dt0a1emm6h.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCrL-SmQ9FnQE52hzFa9MUGtFIqAFgOFiY"
+          "current_key": "AIzaSyCECdqwqOx62iIIT9Uxr_K6Usjq0Bqc2gU"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "58949099469-en4jp766jdjctktoqfb34rc9fmh80v17.apps.googleusercontent.com",
+              "client_id": "553212222816-968u9i0cs192curnvarkt3dt0a1emm6h.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
