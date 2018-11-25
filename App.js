@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Platform, Text, View, ScrollView } from 'react-native';
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import { createStackNavigator, createAppContainer, createBottomTabNavigator } from "react-navigation";
 
-
+ 
 
 import Loading from './screens/Loading'
 import SignUp from './screens/SignUp'
@@ -11,6 +11,18 @@ import Main from './screens/Main'
 import Eventos from './screens/Eventos'
 import Contatos from './screens/Contatos'
 import TesteNFC from './screens/TesteNFC'
+
+import EventoInfo from './screens/EventoInfo'
+import EventoDocs from './screens/EventoDocs'
+import EventoParts from './screens/EventoParts'
+
+const EventoNav = createBottomTabNavigator(
+    {
+        EventoInfo,
+        EventoDocs,
+        EventoParts,
+    }
+)
 
 const AppNavigator = createStackNavigator(
     {
@@ -21,6 +33,7 @@ const AppNavigator = createStackNavigator(
         Eventos,
         Contatos,
         TesteNFC,
+        EventoNav,
     },
     {
         initialRouteName: "Loading",
@@ -41,7 +54,7 @@ const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends React.Component {
     render() {
-        return <AppContainer />;
+        return <AppContainer teste="teste" />;
     }
 }
 

@@ -3,6 +3,42 @@ Validar as entradas do cadastro
 validar as entradas do login
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------old
+1.4 [IOS]
+
+2.2 ---------------------------------------------------------
+Set project parameters to:
+---------------------------------------------------------
+Project name:  TestTutuNFC
+Company name:  renanaugustocardoso
+Package name:  com.renanaugustocardoso.testtutunfc
+---------------------------------------------------------
+3.1 [IOS]
+3.2 [IOS]
+
+
+===================================================================
+C:\Program Files\Android\Android Studio\jre\bin>keytool -exportcert -alias androiddebugkey -keystore "C:\Users\HOME\.android\debug.keystore" -list -v
+Informe a senha da área de armazenamento de chaves:
+Nome do alias: androiddebugkey
+Data de criação: 09/09/2018
+Tipo de entrada: PrivateKeyEntry
+Comprimento da cadeia de certificados: 1
+Certificado[1]:
+Proprietário: C=US, O=Android, CN=Android Debug
+Emissor: C=US, O=Android, CN=Android Debug
+Número de série: 1
+Válido de: Sun Sep 09 17:09:54 BRT 2018 a: Tue Sep 01 17:09:54 BRT 2048
+Fingerprints do certificado:
+         MD5:  9A:72:19:58:40:99:54:CC:94:1D:58:F8:48:A7:7D:D3
+         SHA1: C3:0B:48:31:59:70:E4:95:B8:E4:E6:7E:DB:8A:10:06:66:25:89:40
+         SHA256: 55:CA:50:19:7C:47:44:05:75:6A:B3:94:C7:2D:CF:A3:DA:92:E2:55:22:A4:51:19:74:E5:F7:97:70:EE:11:33
+         Nome do algoritmo de assinatura: SHA1withRSA
+         Versão: 1
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 PS C:\Program Files\Android\Android Studio\jre\bin> .\keytool -exportcert -alias androiddebugkey -keystore "C:\Users\RenanCardoso\.android\debug.keystore" -list -v
 Informe a senha da área de armazenamento de chaves:
 Nome do alias: androiddebugkey

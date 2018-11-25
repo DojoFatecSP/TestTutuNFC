@@ -29,43 +29,40 @@ export default class Main extends React.Component {
 
     state = {
         user: null,
-        userEventes: [],
+        userEvents: [],
         userEventsData: [],
     }
 
     componentDidMount() {
-        setTimeout(
-            () => {
-                this.setState({user: firebase.auth().currentUser})
-                firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).get()
-                    .then(doc => {
 
-                        console.log('consultando os eventos do usuário', doc.data().events)
-                        
-                        this.setState({userEvents: doc.data().events})
+        this.setState({user: firebase.auth().currentUser})
+        firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).get()
+            .then(doc => {
 
-                        
-                        doc.data().events.forEach(docRef => {
+                //console.log('consultando os eventos do usuário', doc.data().events)                
+                this.setState({userEvents: doc.data().events})
 
-                            firebase.firestore().collection('events').doc(docRef).get()
-                                .then(eventDoc => {
-                                    //console.log('consultando dados do eventos', eventDoc.data())
-                                    this.setState(prev => ({userEventsData: [eventDoc.data(), ...prev.userEventsData]}))
-                                    //this.setState({userEventsData: [eventDoc.data()]})
-                                    //userEventsData.push(eventDoc.data())
-                                })
+                doc.data().events.forEach(docRef => {
+
+                    firebase.firestore().collection('events').doc(docRef).get()
+                        .then(eventDoc => {
+                            //console.log('consultando dados do eventos', eventDoc.data())
+                            this.setState(prev => ({userEventsData: [eventDoc.data(), ...prev.userEventsData]}))
+                            //this.setState({userEventsData: [eventDoc.data()]})
+                            //userEventsData.push(eventDoc.data())
                         })
+                })
 
 
-                    }).catch(err => {
-                        alert('Ops..... alguma coisa deu ruim com os nossos servidores, por favor tente mais tarde!')
-                        console.warn(err)
-                    })
-            }, 1000);
+            }).catch(err => {
+                alert('Ops..... alguma coisa deu ruim com os nossos servidores, por favor tente mais tarde!')
+                console.warn(err)
+            })
+            
     }
 
     render() {
-        console.log(this.state.userEventsData)
+        //console.log(this.state.userEventsData)
         return (
             <View style={styles.container}>
                 <List >
