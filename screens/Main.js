@@ -19,7 +19,7 @@ const ops = [
         title: 'Teste de NFC',
         icon: 'nfc',
         goto: 'TesteNFC',
-    },
+    }
 ]
 
 export default class Main extends React.Component {
@@ -31,11 +31,12 @@ export default class Main extends React.Component {
         user: null,
         userEvents: [],
         userEventsData: [],
+        opcoes: ops,
     }
 
     componentDidMount() {
 
-        this.setState({user: firebase.auth().currentUser})
+        this.setState({user: firebase.auth().currentUser, opcoes: [...ops, {title: firebase.auth().currentUser.email, icon: 'person', goto: 'Main'}] })
         firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).get()
             .then(doc => {
 
@@ -67,7 +68,7 @@ export default class Main extends React.Component {
             <View style={styles.container}>
                 <List >
                     {
-                        ops.map((item) => (
+                        this.state.opcoes.map((item) => (
                             <ListItem
                                 key={item.title}
                                 title={item.title}
@@ -85,6 +86,7 @@ export default class Main extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        
         //justifyContent: 'center',
         //alignItems: 'center'
     },
